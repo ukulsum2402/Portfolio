@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kulsum | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+section{
+    padding:80px 10%;
+}
+
+/* NAVBAR */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 10%;
+    background:#0f172a;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav h2{
+    color:#38bdf8;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
+}
+
+/* HERO */
+.hero-container{
+    display:flex;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.hero-box{
+    flex:1;
+    min-width:320px;
+    background:#1e293b;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 40px rgba(0,0,0,0.4);
+    transition:0.4s;
+}
+
+.hero-box:hover{
+    transform:translateY(-8px);
+}
+
+.left-box{
+    text-align:center;
+}
+
+.left-box img{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #38bdf8;
+    margin-bottom:20px;
+}
+
+.left-box h1{
+    margin-bottom:10px;
+}
+
+.left-box h3{
+    color:#38bdf8;
+    margin-bottom:20px;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 25px;
+    background:#38bdf8;
+    color:#0f172a;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#0ea5e9;
+    transform:scale(1.05);
+}
+
+.right-box h2{
+    color:#38bdf8;
+    margin-bottom:20px;
+}
+
+.right-box p{
+    color:#cbd5e1;
+    line-height:1.8;
+    margin-bottom:15px;
+}
+
+/* SKILLS */
+#skills h2{
+    text-align:center;
+    margin-bottom:40px;
+    color:#38bdf8;
+}
+
+.skills-wrapper{
+    display:flex;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.skills-category{
+    flex:1;
+    min-width:300px;
+}
+
+.skills-category h3{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.skills-row{
+    display:flex;
+    gap:20px;
+}
+
+.skill-box{
+    flex:1;
+    background:#1e293b;
+    padding:20px;
+    border-radius:15px;
+    text-align:center;
+    transition:0.4s;
+}
+
+.skill-box img{
+    width:50px;
+    margin-bottom:10px;
+}
+
+.skill-box:hover{
+    transform:translateY(-8px);
+    background:#334155;
+}
+
+
+#projects h2{
+    text-align:center;
+    margin-bottom:50px;
+    color:#38bdf8;
+}
+
+.projects-container{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+}
+
+.project-card{
+    background:#1e293b;
+    padding:30px;
+    border-radius:20px;
+    transition:0.4s;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.project-card:hover{
+    transform:translateY(-8px);
+}
+
+.project-card h3{
+    margin-bottom:15px;
+}
+
+.project-card p{
+    color:#cbd5e1;
+    margin-bottom:20px;
+    line-height:1.7;
+}
+
+.project-links{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn-small{
+    padding:10px 18px;
+    background:#38bdf8;
+    color:#0f172a;
+    border-radius:25px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.btn-small:hover{
+    background:#0ea5e9;
+    transform:scale(1.05);
+}
+
+.btn-small.live{
+    background:#22c55e;
+    color:white;
+}
+
+.btn-small.live:hover{
+    background:#16a34a;
+}
+
+
+
+#contact {
+    text-align:center;
+}
+
+#contact h2 {
+    color:#38bdf8;
+    margin-bottom:50px;
+}
+
+.contact-container {
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.contact-card {
+    background:#1e293b;
+    padding:30px;
+    border-radius:20px;
+    width:250px;
+    text-decoration:none;
+    color:white;
+    transition:0.4s;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.contact-card img {
+    width:50px;
+    margin-bottom:15px;
+}
+
+.contact-card h3 {
+    margin-bottom:10px;
+}
+
+.contact-card p {
+    font-size:14px;
+    color:#cbd5e1;
+}
+
+.contact-card:hover {
+    transform:translateY(-8px);
+    background:#334155;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h2>Kulsum</h2>
+    <ul>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+<div class="hero-container">
+
+    <div class="hero-box left-box">
+        <img src="kulsum.home.png" alt="Profile">
+        <h1>Hi, I'm Kulsum</h1>
+        <h3>Aspiring Software Developer</h3>
+        <a href="resume_kulsum.pdf" target="_blank" class="btn">View Resume</a>
+    </div>
+
+    <div class="hero-box right-box">
+        <h2>About Me</h2>
+        <p>
+            I am a passionate and motivated aspiring software developer with strong 
+            skills in HTML, CSS, and JavaScript. I enjoy building responsive and 
+            user-friendly web applications.
+        </p>
+        <p>
+            I also have foundational knowledge in Java and Python, along with MS Excel 
+            for data handling. I enjoy solving logical problems and continuously learning 
+            new technologies to grow as a professional developer.
+        </p>
+    </div>
+
+</div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+<h2>Skills</h2>
+
+<div class="skills-wrapper">
+
+    <div class="skills-category">
+        <h3>Web Development</h3>
+        <div class="skills-row">
+            <div class="skill-box">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png">
+                <p>HTML</p>
+            </div>
+            <div class="skill-box">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png">
+                <p>CSS</p>
+            </div>
+            <div class="skill-box">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png">
+                <p>JavaScript</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="skills-category">
+        <h3>Programming & Tools</h3>
+        <div class="skills-row">
+            <div class="skill-box">
+                <img src="https://cdn-icons-png.flaticon.com/512/226/226777.png">
+                <p>Java (Basics)</p>
+            </div>
+            <div class="skill-box">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png">
+                <p>Python</p>
+            </div>
+            <div class="skill-box">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732220.png">
+                <p>MS Excel</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+<h2>Projects</h2>
+
+<div class="projects-container">
+
+    <!-- Fake News Detection -->
+    <div class="project-card">
+        <h3>Fake News Detection System</h3>
+        <p>
+            A machine learning based project that detects whether a news article 
+            is real or fake using Python and data analysis techniques. 
+            It uses text processing and classification algorithms to predict results.
+        </p>
+        <div class="project-links">
+            <a href="https://github.com/ukulsum2402/fake-news-detection-system" target="_blank" class="btn-small">View Repository</a>
+        </div>
+    </div>
+
+    <!-- Advanced Calculator -->
+    <div class="project-card">
+        <h3>Advanced Calculator</h3>
+        <p>
+            A responsive web-based calculator built using HTML, CSS, and JavaScript. 
+            It performs advanced mathematical operations and includes a modern dark UI design.
+        </p>
+        <div class="project-links">
+            <a href="https://github.com/ukulsum2402/Simple-CGPA-Calculator" target="_blank" class="btn-small">View Repository</a>
+            <a href="https://adcalci.netlify.app/" target="_blank" class="btn-small live">Live Use</a>
+        </div>
+    </div>
+
+    <!-- Hall Booking System -->
+    <div class="project-card">
+        <h3>Hall Booking System</h3>
+        <p>
+            A web-based application designed to manage hall reservations efficiently. 
+            It allows users to check availability, book halls, and manage booking details 
+            with a clean and user-friendly interface.
+        </p>
+        <div class="project-links">
+            <a href="https://github.com/ukulsum2402/hall-finder" target="_blank" class="btn-small">View Repository</a>
+        </div>
+    </div>
+
+    <!-- Student Grade Management System -->
+    <div class="project-card">
+        <h3>Student Grade Management System</h3>
+        <p>
+            A Student Grade Management System developed by java program.
+        </p>
+        <div class="project-links">
+            <a href="https://github.com/ukulsum2402/Student-Grade-Management-System----Project1" target="_blank" class="btn-small">View Repository</a>
+        </div>
+    </div>
+
+</div>
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact Me</h2>
+
+    <div class="contact-container">
+
+        <!-- LinkedIn -->
+        <a href="https://linkedin.com/in/umm-e-kulsum-799a5a286" target="_blank" class="contact-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+            <h3>LinkedIn</h3>
+            <p>Connect with me professionally</p>
+        </a>
+
+        <!-- GitHub -->
+        <a href="https://github.com/ukulsum2402" target="_blank" class="contact-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub">
+            <h3>GitHub</h3>
+            <p>View my repositories</p>
+        </a>
+
+        <!-- Email -->
+        <a href="ukulsum2402@gmail.com" class="contact-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email">
+            <h3>Email</h3>
+            <p>Send me a message</p>
+        </a>
+
+    </div>
+</section>
+
+
+<footer>
+    © 2026 Kulsum | All Rights Reserved
+</footer>
+
+</body>
+</html>
